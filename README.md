@@ -22,9 +22,7 @@ winget install --id GoLang.Go -e              # 装完重开一个终端；MSI �
 go env -w GOPROXY=https://goproxy.cn,direct   # 国内必设，否则 go get 会一直卡
 ```
 
-> **本机现状（2026/9/19 实测复核）**：Go **go1.27.1 已装**在 `C:\Program Files\Go`，机器 PATH 已配好，**新开一个终端**就能用 `go`；`GOPROXY` 已设成 `https://goproxy.cn,direct`；`gopls v0.23.0` 与 `dlv 1.27.2` 已装（补全 / 跳转 / 断点可用）。
-> 只剩 git 未安装（`winget install --id Git.Git -e`）。
-> `D:\workday\.tools\go` 下还有一份应急用的便携版 go1.22.12（约 215 MB，正式版确认可用后可删）。
+> **本机现状（2026/9/19 实测复核）**：Go **go1.27.1 已装**在 `C:\Program Files\Go`，机器 PATH 已配好，**新开一个终端**就能用 `go`；`GOPROXY` 已设成 `https://goproxy.cn,direct`；`gopls v0.23.0` 与 `dlv 1.27.2` 已装（补全 / 跳转 / 断点可用）；git 2.55.0 已装并已推送首次提交。
 > 完整的环境自查清单见 [docs/W1-使用说明.md](docs/W1-使用说明.md) 第 0 节。
 
 ---
@@ -38,7 +36,11 @@ go env -w GOPROXY=https://goproxy.cn,direct   # 国内必设，否则 go get 会
 | `problems/` | **20 道 LeetCode 的 Go 实现 + 表驱动测试** | `go test ./problems/ -v` |
 | `problems/notes/` | 每题一篇题解笔记（思路 / 卡点 / 复做日期） | 阅读，**新题照着补** |
 | `notes/` | 知识点笔记：切片、map 并发、错误处理、Java→Go | 周日复盘时用 |
+| `playground/` | **你自己的练习代码**（看来的变成写出来的，要提交） | `go run ./playground/01_vars` |
 | `docs/` | [使用说明](docs/W1-使用说明.md)、[资料索引](docs/W1-资料索引.md)、[编写约定](docs/编写约定.md)、[验证记录](docs/验证记录.md) | 先看使用说明 |
+
+> 📦 **仓库地址**：<https://github.com/yeziyesuan/go-dsa-lab>（public，面试可展示）
+> 提交节奏：**每天至少一次** `git add -A; git commit -m "..." ; git push`。
 | `pkgexample/` | 演示「包与导出规则」的小包（大写导出、小写私有） | 被 `syntax/10_package` 引用 |
 | `scripts/check.ps1` | **一键自检**：go 环境 → gofmt → go vet → go test → 逐个 `go run syntax/*` | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check.ps1` |
 
