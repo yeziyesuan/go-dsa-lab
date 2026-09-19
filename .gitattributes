@@ -1,0 +1,16 @@
+# 行尾统一为 LF：跨 Windows / macOS / Linux 都不会产生「整文件改写」的噪音 diff。
+# 本仓库所有文件本来就是 LF，这里只是把它固定下来，避免 Git for Windows 默认的
+# core.autocrlf 在检出时把文件改成 CRLF（改完 git status 会一片红，很吓人但没意义）。
+* text=auto eol=lf
+
+# 二进制文件不做任何行尾处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.exe binary
+*.zip binary
+
+# 让 GitHub 的语言统计把 Go 排在前面
+*.go linguist-language=Go
