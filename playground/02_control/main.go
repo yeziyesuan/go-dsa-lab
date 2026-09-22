@@ -5,10 +5,17 @@ import "fmt"
 func main() {
 	fmt.Println("===带初始化语句===")
 
-	/*var fs = [2]string{"apple","banana"}
-	if  {
-
-	}*/ //这段不会
+	m := map[string]int{"apple": 3, "banana": 5}
+	if v, ok := m["apple"]; ok {
+		fmt.Println("apple存在,值=", v)
+	} else {
+		fmt.Println("apple不存在")
+	}
+	if v, ok := m["cherry"]; ok {
+		fmt.Println("cherry存在,值=", v)
+	} else {
+		fmt.Println("cherry不存在")
+	}
 	a := 7
 	if a%2 == 0 {
 		fmt.Println("是偶数", a)
@@ -58,14 +65,14 @@ func main() {
 		fmt.Printf("字节下标 %d -> 字符 %c\n", x, v) //fmt.Printf("字节下标%d", x, "->字符%c\n", v)
 	}
 	for v := range 3 {
-		fmt.Print(v, "")
+		fmt.Print(v)
 	}
 	fmt.Println("<-整数（Go 1.22新特性）")
 
 	fmt.Println()
 	fmt.Println("===switch:默认不穿透===")
-	green := 'B'
-	switch green {
+	gradn := 'B'
+	switch gradn {
 	case 'A':
 		fmt.Println("优秀")
 	case 'B':
@@ -81,7 +88,7 @@ func main() {
 	case 2:
 		fmt.Println("这一行是被fallthrough带进来的")
 	case 3:
-		break
+
 	}
 
 	switch day := 6; day {
@@ -98,8 +105,8 @@ func main() {
 		fmt.Println(z, "是正数")
 	case z < 0:
 		fmt.Println(z, "是负数")
-	case z == 0:
-		fmt.Println("是0")
+	default:
+		fmt.Println("为0")
 	}
 
 }
