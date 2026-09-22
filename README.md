@@ -37,7 +37,7 @@ go env -w GOPROXY=https://goproxy.cn,direct   # 国内必设，否则 go get 会
 | `problems/notes/` | 每题一篇题解笔记（思路 / 卡点 / 复做日期） | 阅读，**新题照着补** |
 | `notes/` | 知识点笔记：切片、map 并发、错误处理、Java→Go | 周日复盘时用 |
 | `playground/` | **你自己的练习代码**（看来的变成写出来的，要提交） | `go run ./playground/01_vars` |
-| `docs/` | [使用说明](docs/W1-使用说明.md)、[资料索引](docs/W1-资料索引.md)、[编写约定](docs/编写约定.md)、[验证记录](docs/验证记录.md) | 先看使用说明 |
+| `docs/` | [使用说明](docs/W1-使用说明.md)、[资料索引](docs/W1-资料索引.md)、[编写约定](docs/编写约定.md)、[验证记录](docs/验证记录.md)、[纸面自检四问](docs/纸面自检四问.md) | 先看使用说明 |
 
 > 📦 **仓库地址**：<https://github.com/yeziyesuan/go-dsa-lab>（public，面试可展示）
 > 提交节奏：**每天至少一次** `git add -A; git commit -m "..." ; git push`。
