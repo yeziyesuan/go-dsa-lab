@@ -57,7 +57,7 @@ func main() {
 	}
 
 	for _, v := range arr {
-		fmt.Print(v, "") //fmt.Printf( "",v)
+		fmt.Print(v, " ") //fmt.Printf( "",v)
 	}
 	fmt.Println()
 
@@ -65,14 +65,14 @@ func main() {
 		fmt.Printf("字节下标 %d -> 字符 %c\n", x, v) //fmt.Printf("字节下标%d", x, "->字符%c\n", v)
 	}
 	for v := range 3 {
-		fmt.Print(v)
+		fmt.Print(v, " ")
 	}
 	fmt.Println("<-整数（Go 1.22新特性）")
 
 	fmt.Println()
 	fmt.Println("===switch:默认不穿透===")
-	gradn := 'B'
-	switch gradn {
+	green := 'B'
+	switch green {
 	case 'A':
 		fmt.Println("优秀")
 	case 'B':

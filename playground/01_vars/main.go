@@ -29,7 +29,8 @@ func main() {
 	var x, y int = 1, 2
 	p, q := "left", "right"
 	fmt.Println("x , y = ", x, y, "|p , q = ", p, q)
-	v, err := 100, error(nil)
+	var err error // 零值就是 nil；比写 error(nil) 清楚
+	v := 100
 	fmt.Println("v,err =", v, err)
 	fmt.Println()
 	fmt.Println("===常量与iota===")
