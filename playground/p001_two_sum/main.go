@@ -15,14 +15,15 @@ import "fmt"
 }*/
 //哈希
 func twoSum(nums []int, target int) []int {
-	hashtable := make (map[int]int)
+	hashtable := make(map[int]int)
 	for i := 0; i < len(nums); i++ {
 		v := nums[i]
-		if _, ok :=hashtable[target-v];ok{
-			return []int{hashtable[target-v],i}
-		}else{
-			hashtable[v] = i}
-		
+		if _, ok := hashtable[target-v]; ok {
+			return []int{hashtable[target-v], i}
+		} else {
+			hashtable[v] = i
+		}
+
 	}
 	return nil
 }
