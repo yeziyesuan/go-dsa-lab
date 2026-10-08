@@ -5,15 +5,17 @@
 // 答案自己写；随时保持能编译（写完一段就跑一次）。
 //
 // ⛳ 今晚（2026/10/8）只做这 5 处 —— 做完就算重启成功，其余的今晚不许碰：
-//    TODO 1   divmod        多返回值 + error（要补 errors 的 import）
-//    TODO 5   countUp       命名返回值 + defer 改返回值（先想清楚：return 之后 defer 才跑）
-//    TODO 6   sum           可变参数；sum() / sum(1,2,3) / sum(nums...) 三种都要跑
-//    TODO 7   counter       闭包；两个计数器实例要互不影响
-//    TODO 11  recoverDemo   defer + recover 把 panic 变成普通返回值
-//    判据：go run ./playground/05_func → 上面这 5 行括号里的期望值全中；文件顶部补 3 行反直觉笔记
+//
+//	TODO 1   divmod        多返回值 + error（要补 errors 的 import）
+//	TODO 5   countUp       命名返回值 + defer 改返回值（先想清楚：return 之后 defer 才跑）
+//	TODO 6   sum           可变参数；sum() / sum(1,2,3) / sum(nums...) 三种都要跑
+//	TODO 7   counter       闭包；两个计数器实例要互不影响
+//	TODO 11  recoverDemo   defer + recover 把 panic 变成普通返回值
+//	判据：go run ./playground/05_func → 上面这 5 行括号里的期望值全中；文件顶部补 3 行反直觉笔记
 //
 // ⏳ 剩下 6 处（TODO 2 / 3 / 4 / 8 / 9 / 10）都是这 5 处的变形 → **留到 W4 弹性块再补**。
-//    今晚顺手做了不算超额，叫抢跑——抢跑吃的是明天的额度。
+//
+//	今晚顺手做了不算超额，叫抢跑——抢跑吃的是明天的额度。
 package main
 
 import "fmt"
